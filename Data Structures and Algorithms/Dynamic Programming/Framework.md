@@ -1,5 +1,7 @@
 
 
+Questions like asking for maximum / minimum / longest of something are typically require a dynamic programming solution. For these, we may have to make decisions that may depend on previously made desicions, which is very typical of a problem involving subsequences etc.
+
 To solve a DP problem, we need to combine 3 things:
 
 ###A function or data structure that will compute/contain the answer to the problem for every given state.
