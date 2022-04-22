@@ -1,4 +1,4 @@
-###Implement the Trie class:
+### Implement the Trie class:
 
  - Trie() Initializes the trie object.
  - void insert(String word) Inserts the string word into the trie.

@@ -10,7 +10,7 @@ Publishers tag each message with a topic, and send it to the PubSubService which
 Subscriber registers itself with PubSubService (middleman) and tells that it’s interested in messages related to a particular topic.
 Publisher-Subscriber pattern is highly loosely coupled architecture where the publishers don’t know who the subscribers are and subscribers don’t know who the publishers of topic are.
 
-###Publisher Interface
+### Publisher Interface
 
 Publisher interface defines the abstract method publish() which sends message to PubSub Service.
 
@@ -20,7 +20,7 @@ public interface PublisherInterface{
 }
 ```
 
-###Publisher Implementation Class
+### Publisher Implementation Class
 
 PublisherImpl class implements Publisher interface and implements publish method, which sends the message to PubSubService.
 
@@ -35,7 +35,7 @@ public class PublisherImpl implements PublisherInterface{
 
 ```
 
-###Message POJO Class
+### Message POJO Class
 
 Message class is a simple POJO class to represent the messages. It has topic attribute (for this subscriber is interested) and an attribute for message payload.
 
@@ -70,7 +70,7 @@ Message class is a simple POJO class to represent the messages. It has topic att
 
 ```
 
-###Subscriber Abstract Class
+### Subscriber Abstract Class
 
 Subscriber is an abstract class which has below: <br/><br/>
 addSubscriber() – Adds/Registers subscriber for a topic with PubSub service. <br/>
@@ -106,7 +106,7 @@ getMessagesForSubscriberOfTopic() – Method which requests for messages for sub
     
 ```
 
-###Subscriber Implementation class
+### Subscriber Implementation class
 
 SubscriberImpl class extends Subscriber and implements the abstract methods mentioned above.
 
@@ -128,7 +128,7 @@ SubscriberImpl class extends Subscriber and implements the abstract methods ment
     }
 ```
 
-###PubSubService implementation 
+### PubSubService implementation 
 
 PubSubService is the main class which has below: <br/><br/>
 Map<String, Set<Subscriber>> subscribersTopicMap – Stores the subscribers interested in a topic. <br/>
@@ -216,7 +216,7 @@ getMessagesForSubscriberOfTopic() – Sends messages about a topic for subscribe
     }
 ```
 
-###Driver Class 
+### Driver Class 
 
 The Driver Class is where we run the whole thing. 
 

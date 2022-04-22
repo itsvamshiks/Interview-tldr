@@ -4,7 +4,7 @@ Questions like asking for maximum / minimum / longest of something are typically
 
 To solve a DP problem, we need to combine 3 things:
 
-###A function or data structure that will compute/contain the answer to the problem for every given state.
+### A function or data structure that will compute/contain the answer to the problem for every given state.
 
 For Climbing Stairs, let's say we have an function \text{dp}dp where \text{dp(i)}dp(i) returns the number of ways to climb to the i^{th}i
 th
@@ -15,7 +15,7 @@ How did we decide on the design of the function? The problem is asking "How many
 Typically, top-down is implemented with a recursive function and hash map, whereas bottom-up is implemented with nested for loops and an array. When designing this function or array, we also need to decide on state variables to pass as arguments. This problem is very simple, so all we need to describe a state is to know what step we are currently on \text{i}i. We'll see later that other problems have more complex states.
 
 
-###A recurrence relation to transition between states.
+### A recurrence relation to transition between states.
 
 A recurrence relation is an equation that relates different states with each other. Let's say that we needed to find how many ways we can climb to the 30th stair. Well, the problem states that we are allowed to take either 1 or 2 steps at a time. Logically, that means to climb to the 30th stair, we arrived from either the 28th or 29th stair. Therefore, the number of ways we can climb to the 30th stair is equal to the number of ways we can climb to the 28th stair plus the number of ways we can climb to the 29th stair.
 
@@ -24,7 +24,7 @@ The problem is, we don't know how many ways there are to climb to the 28th or 29
 Upon careful inspection, we can see that this problem is actually the Fibonacci sequence in disguise! This is a very simple recurrence relation - typically, finding the recurrence relation is the most difficult part of solving a DP problem. We'll see later how some recurrence relations are much more complicated, and talk through how to derive them.
 
 
-###Base cases, so that our recurrence relation doesn't go on infinitely.
+### Base cases, so that our recurrence relation doesn't go on infinitely.
 
 The equation \text{dp(i) = dp(i - 1) + dp(i - 2)}dp(i) = dp(i - 1) + dp(i - 2) on its own will continue forever to negative infinity. We need base cases so that the function will eventually return an actual number.
 
