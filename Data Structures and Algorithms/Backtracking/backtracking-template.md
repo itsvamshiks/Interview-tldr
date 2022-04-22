@@ -1,4 +1,4 @@
-    ## Backtracking Template 
+    ##  Backtracking Template 
 
 ```
 backtrack(candidate){

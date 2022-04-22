@@ -1,11 +1,11 @@
-#DataTypes in Java
+# DataTypes in Java
 
-##int 
+## int 
 
 32 bit
 
 -2147483648 to 2147483647
 
-##long
+## long
 
 64 bit

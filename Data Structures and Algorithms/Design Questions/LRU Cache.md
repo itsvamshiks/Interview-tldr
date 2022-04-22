@@ -1,11 +1,11 @@
-##Implement the LRUCache class:
+## Implement the LRUCache class:
 
 LRUCache(int capacity) Initialize the LRU cache with positive size capacity.
 int get(int key) Return the value of the key if the key exists, otherwise return -1.
 void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.
 The functions get and put must each run in O(1) average time complexity.
 
-### #NOTE : Here, we are using Custom Doubly Linked List for achieving O(1) get and put operations. If there is no such restriction, you can use standard Java Queue which has O(n) get and put operations
+#### NOTE : Here, we are using Custom Doubly Linked List for achieving O(1) get and put operations. If there is no such restriction, you can use standard Java Queue which has O(n) get and put operations
 
 ```
 class LRUCache {

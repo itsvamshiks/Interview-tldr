@@ -1,6 +1,6 @@
 http://www.code2succeed.com/pub-sub/
 
-##Publisher Subscriber pattern
+## Publisher Subscriber pattern
 
 There are three components in Pub-Sub pattern: Publisher, Subscriber and PubSub Service.
 
