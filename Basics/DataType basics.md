@@ -9,3 +9,5 @@
 ## long
 
 64 bit
+
+Abstract class doest not have to override all the methods in the interface

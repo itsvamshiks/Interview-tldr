@@ -199,12 +199,17 @@ getMessagesForSubscriberOfTopic() – Sends messages about a topic for subscribe
                     
                     if(message.getTopic().equalsIgnoreCase(topic)){
                         Set<Subscriber> subscribersOfTopic = subscribersTopicMap.get(topic);
-                        
-                        for(Subscriber subscriber : subscribersOfTopic){
+                        if(subscribersOfTopic.contains(subscriber)){
                             List<Message> subscriberMessages = subscriber.getSubscriberMessages();
                             subscriberMessages.add(message);
                             subscriber.setSubscriberMessages(subscriberMessages);
                         }
+                        
+                        /*for(Subscriber subscriber : subscribersOfTopic){
+                            List<Message> subscriberMessages = subscriber.getSubscriberMessages();
+                            subscriberMessages.add(message);
+                            subscriber.setSubscriberMessages(subscriberMessages);
+                        }*/
                     
                     }
                 
